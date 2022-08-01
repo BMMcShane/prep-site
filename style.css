@@ -1,3 +1,9 @@
 body {
-    background: burlywood;
+    background: black;
+    color: white;
+    text-align:center;
+}
+h2  {
+    background:white;
+    color:black;
 }

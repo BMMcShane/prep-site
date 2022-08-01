@@ -3,9 +3,102 @@
     <head>
         <link rel="stylesheet" href="style.css" />
         <title>My Prep Site</title>
+        <style>
+            .btn {
+              border: none;
+              background-color: black;
+              padding: 14px 28px;
+              font-size: 28px;
+              cursor: pointer;
+              display: inline-block;
+            }
+            
+            .btn:hover {background: #eee;}
+            
+            .first {color: green;}
+            .second {color: dodgerblue;}
+            .third {color: orange;}
+
+            .dropbtn {
+             background-color: black;
+            color: red;
+            padding: 14px 28px;
+            font-size: 28px;
+            border: none;
+             cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+            background-color: black;
+            }
+
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .show {display:block;}
+            </style>
     </head>
+
     <body>
+        
         <h1>Hello and Welcome!</h1>
         <script src="script.js"></script>
+        <img src="https://images.theconversation.com/files/89316/original/image-20150722-1437-13qzivj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" alt="Little Grey Man" style="width:400px;height:300px";>
+        
+        <p id="one"></p>
+        <p id="two"></p>
+        <p id="three"></p>
+        <button onclick="firstFunction()" class="btn first">1</button>
+        <script>
+            function firstFunction() {
+              document.getElementById("one").innerHTML = "First they came for my button,";
+            }
+            </script>
+            
+        <button onclick="secondFunction()" class="btn second">2</button>
+        <script>
+            function secondFunction() {
+              document.getElementById("two").innerHTML = "and I said nothing because I was still figuring out how they worked.";
+            }
+            </script>
+        <button onclick="thirdFunction()" class="btn third">3</button>
+        <script>
+            function thirdFunction() {
+              document.getElementById("three").innerHTML = "Well look at me now.";
+            }
+            </script>
+        <div class="dropdown">
+            <button id="myBtn" class="dropbtn">4</button>
+            <div id="fourth" class="dropdown-content">
+              <a href="#home">This is a dropdown menu!</a>
+            </div>
+          </div>
+          <script>
+            document.getElementById("myBtn").onclick = function() {fourthFunction()};
+            function fourthFunction() {
+            document.getElementById("fourth").classList.toggle("show");
+            }
+          </script>
+        <p>The content, styling, and functionality of your site are up to you. Keep in mind that you may show this project to your peers and future instructors, so be considerate of content/subject matter and your potential audience.</p>
     </body>
 </html>
